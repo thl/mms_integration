@@ -6,6 +6,8 @@ class MediaManagementResource < ActiveResource::Base
   elsif hostname == 'dev.thlib.org'
     self.site = 'http://127.0.0.1/'
     headers['Host'] = 'dev.mms.thlib.org'
+  elsif hostname == 'e-bhutan.bt'
+    self.site = 'http://www.e-bhutan.net.bt/mms/'
   elsif hostname.ends_with? 'local'
     self.site = 'http://localhost/master/mms/'
   elsif hostname =~ /sds[3-8].itc.virginia.edu/
