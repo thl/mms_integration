@@ -12,7 +12,10 @@ class Document < MediaManagementResource
   end
   
   def self.find_by_title(title)
-    # Since its going as part of the url, space is not welcome on the rails side as a '+'. Should be %20 instead.
     self.find(:first, :params => {:title => title})
+  end
+  
+  def self.find_by_original_medium_id(id)
+    self.find(:first, :params => {:original_medium_id => id})
   end
 end
