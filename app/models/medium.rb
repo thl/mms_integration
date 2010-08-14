@@ -9,4 +9,12 @@ class Medium < MediaManagementResource
       return [self.associated_category.id.to_i]
     end
   end
+
+  def feature_ids
+    if self.associated_feature.instance_of? Array
+      return self.associated_feature.collect{|c| c.fid.to_i }
+    else
+      return [self.associated_feature.fid.to_i]
+    end
+  end
 end
