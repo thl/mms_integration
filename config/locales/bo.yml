@@ -1,0 +1,10 @@
+# Localization file for Tibetan of mms integration plugin.
+bo:
+    activeresource:
+        models:
+            medium:
+                one: 'resource'
+                other: 'resources'
+        attributes:
+            medium:
+                id: 'Resource #'

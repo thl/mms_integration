@@ -1,0 +1,10 @@
+# Localization file for English of mms integration plugin.
+en:
+    activeresource:
+        models:
+            medium:
+                one: 'resource'
+                other: 'resources'
+        attributes:
+            medium:
+                id: 'Resource #'

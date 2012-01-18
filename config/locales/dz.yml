@@ -1,0 +1,10 @@
+# Localization file for Dzongkha of mms integration plugin.
+dz:
+    activeresource:
+        models:
+            medium:
+                one: 'resource'
+                other: 'resources'
+        attributes:
+            medium:
+                id: 'Resource #'

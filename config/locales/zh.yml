@@ -1,0 +1,10 @@
+# Localization file for Chinese of mms integration plugin.
+zh:
+    activeresource:
+        models:
+            medium:
+                one: 'resource'
+                other: 'resources'
+        attributes:
+            medium:
+                id: 'Resource #'
