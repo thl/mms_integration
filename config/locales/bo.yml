@@ -3,8 +3,8 @@ bo:
     activeresource:
         models:
             medium:
-                one: 'resource'
-                other: 'resources'
+                one: 'ཐོན་ཁུངས།'
+                other: 'ཐོན་ཁུངས་ཁག'
         attributes:
             medium:
-                id: 'Resource #'
+                id: 'ཐོན་ཁུངས་ད#'

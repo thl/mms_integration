@@ -3,8 +3,8 @@ zh:
     activeresource:
         models:
             medium:
-                one: 'resource'
-                other: 'resources'
+                one: '资源'
+                other: '资源 '
         attributes:
             medium:
-                id: 'Resource #'
+                id: '资源'
