@@ -4,7 +4,7 @@ bo:
         models:
             medium:
                 one: 'ཐོན་ཁུངས།'
-                other: 'ཐོན་ཁུངས་ཁག'
+                other: 'ཐོན་ཁུངས་ཁག་'
         attributes:
             medium:
                 id: 'ཐོན་ཁུངས་ད#'
