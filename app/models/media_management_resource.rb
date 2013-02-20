@@ -8,8 +8,8 @@ class MediaManagementResource < ActiveResource::Base
     headers['Host'] = 'dev-mms.thlib.org'
   elsif hostname == 'e-bhutan.bt'
     self.site = 'http://www.e-bhutan.net.bt/mms/'
-  #elsif hostname.ends_with?('local') || hostname.starts_with?('vpn-user')
-  #  self.site = 'http://localhost/mms/'
+  elsif hostname.ends_with?('local') || hostname.starts_with?('vpn-user')
+    self.site = 'http://localhost/mms/'
   elsif hostname =~ /sds.+\.itc\.virginia\.edu/
     self.site = 'http://127.0.0.1/'
     headers['Host'] = 'mms.thlib.org'
