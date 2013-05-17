@@ -1,21 +1,22 @@
 class MediaManagementResource < ActiveResource::Base
-  hostname = Socket.gethostname.downcase
-  if hostname == 'sds6.itc.virginia.edu'
-    self.site = 'http://127.0.0.1/'
-    headers['Host'] = 'staging.mms.thlib.org'
-  elsif hostname == 'dev.thlib.org'
+  case InterfaceUtils::Server.environment
+  when InterfaceUtils::Server::DEVELOPMENT
     self.site = 'http://127.0.0.1/'
     headers['Host'] = 'dev-mms.thlib.org'
-  elsif hostname == 'e-bhutan.bt'
-    self.site = 'http://www.e-bhutan.net.bt/mms/'
-  elsif hostname.ends_with?('local') || hostname.starts_with?('vpn-user')
-    self.site = 'http://localhost/mms/'
-  elsif hostname =~ /sds.+\.itc\.virginia\.edu/
+  when InterfaceUtils::Server::STAGING
+    self.site = 'http://127.0.0.1/'
+    headers['Host'] = 'staging.mms.thlib.org'
+  when InterfaceUtils::Server::PRODUCTION
     self.site = 'http://127.0.0.1/'
     headers['Host'] = 'mms.thlib.org'
+  when InterfaceUtils::Server::LOCAL
+    self.site = 'http://localhost/mms/'
+  when InterfaceUtils::Server::EBHUTAN
+    self.site = 'http://www.e-bhutan.net.bt/mms/'
   else
     self.site = 'http://mms.thlib.org/'
-  end  
+  end
+
   self.timeout = 100
   self.format = :xml
 end
