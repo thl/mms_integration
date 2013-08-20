@@ -2,7 +2,7 @@
 en:
     activeresource:
         models:
-            medium:
+            mms_integration/medium:
                 one: 'resource'
                 other: 'resources'
         attributes:
