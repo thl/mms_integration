@@ -4,7 +4,7 @@ module MmsIntegration
     
     def url
       self.captions.first
-      i = self.images.detect{|i| i.thumbnail=='compact'} #essay
+      i = self.images.detect{|i| i.thumbnail=='essay'} #essay
       i.url if !i.nil?
     end
     
