@@ -4,14 +4,8 @@ module MmsIntegration
 
     # Using nested active resource. This is problematic when caching
     def prioritized_title
-      titles = self.attributes['title']
-      return self.id if titles.nil?
-      if titles.instance_of?(Array)
-        elem = titles.first
-      else
-        elem = titles
-      end
-      return elem.instance_of?(Hash) ? elem['title'] : elem.title 
+      first = self.titles.first
+      return first.nil? ? self.id : first.title
     end
 
     def self.find_by_title(title)
