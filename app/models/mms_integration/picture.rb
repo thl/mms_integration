@@ -3,7 +3,7 @@ module MmsIntegration
     headers['Host'] = MediaManagementResource.headers['Host'] if !MediaManagementResource.headers['Host'].blank?
     
     def url
-      i = self.images.detect{|i| i.thumbnail=='essay'} #essay
+      i = self.images.detect{|i| i.thumbnail=='compact'} #essay
       i.url if !i.nil?
     end
     

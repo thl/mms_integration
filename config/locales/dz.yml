@@ -2,9 +2,12 @@
 dz:
     activeresource:
         models:
-            medium:
+            mms_integration/medium:
                 one: 'resource'
                 other: 'resources'
+            mms_integration/picture:
+                one: 'picture'
+                other: 'pictures'
         attributes:
             medium:
                 id: 'Resource #'

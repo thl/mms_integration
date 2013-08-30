@@ -2,9 +2,12 @@
 bo:
     activeresource:
         models:
-            medium:
+            mms_integration/medium:
                 one: 'ཐོན་ཁུངས།'
                 other: 'ཐོན་ཁུངས་ཁག་'
+            mms_integration/picture:
+                one: 'picture'
+                other: 'pictures'
         attributes:
             medium:
                 id: 'ཐོན་ཁུངས་ད#'

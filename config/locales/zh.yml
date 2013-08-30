@@ -2,9 +2,12 @@
 zh:
     activeresource:
         models:
-            medium:
+            mms_integration/medium:
                 one: '资源'
                 other: '资源 '
+            mms_integration/picture:
+                one: 'picture'
+                other: 'pictures'
         attributes:
             medium:
                 id: '资源'
