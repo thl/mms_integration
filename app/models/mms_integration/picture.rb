@@ -7,20 +7,30 @@ module MmsIntegration
     end
     
     def url
-      image.url if !image.nil?
+      return nil if image.nil?
+      @url ||= image.url
     end
     
     def width
-      @width ||= image.width.to_i if !image.nil?
+      return nil if image.nil?
+      @width ||= image.width.to_i
     end
     
     def height
-      @height ||= image.height.to_i if !image.nil?
+      return nil if image.nil?
+      @height ||= image.height.to_i
+    end
+    
+    def location
+      l = locations.first
+      return nil if l.nil?
+      @location ||= l.first.to_i
     end
     
     def caption
       c = self.captions.first
-      c.title if !c.nil?
+      return nil if c.nil?
+      @caption ||= c.title
     end
     
     private
