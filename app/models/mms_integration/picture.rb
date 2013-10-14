@@ -21,7 +21,7 @@ module MmsIntegration
       @height ||= image.height.to_i
     end
     
-    def location
+    def place_id
       l = locations.first
       return nil if l.nil?
       @location ||= l.first.to_i
