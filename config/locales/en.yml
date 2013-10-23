@@ -2,6 +2,9 @@
 en:
     activeresource:
         models:
+            mms_integration/document:
+                one: 'text'
+                other: 'texts'
             mms_integration/medium:
                 one: 'resource'
                 other: 'resources'

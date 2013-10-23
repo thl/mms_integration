@@ -2,6 +2,9 @@
 dz:
     activeresource:
         models:
+            mms_integration/document:
+                one: 'ཡིག་ཆ།'
+                other: 'ཡིག་ཆ་ཚུ།'
             mms_integration/medium:
                 one: 'resource'
                 other: 'resources'

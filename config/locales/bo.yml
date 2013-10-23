@@ -2,6 +2,9 @@
 bo:
     activeresource:
         models:
+            mms_integration/document:
+                one: 'རྩོམ་ཡིག'
+                other: 'ཡི་གེ་ཁག'
             mms_integration/medium:
                 one: 'ཐོན་ཁུངས།'
                 other: 'ཐོན་ཁུངས་ཁག་'

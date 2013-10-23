@@ -2,6 +2,9 @@
 zh:
     activeresource:
         models:
+            mms_integration/document:
+                one: '文章'
+                other: '文字'
             mms_integration/medium:
                 one: '资源'
                 other: '资源 '
