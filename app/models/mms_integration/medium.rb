@@ -12,5 +12,11 @@ module MmsIntegration
     def feature_ids
       self.associated_features.collect{ |c| c.fid }
     end
+    
+    # Using nested active resource. This is problematic when caching
+    def prioritized_title
+      first = self.titles.first
+      return first.nil? ? self.id : first.title
+    end
   end
 end
