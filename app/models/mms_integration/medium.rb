@@ -18,5 +18,13 @@ module MmsIntegration
       first = self.titles.first
       return first.nil? ? self.id : first.title
     end
+    
+    def web_url
+      return nil if self.type != 'OnlineResource'
+      web_address = self.web_address
+      return '' if web_address.nil?
+      url = web_address.url
+      url.nil? ? '' : url
+    end
   end
 end
