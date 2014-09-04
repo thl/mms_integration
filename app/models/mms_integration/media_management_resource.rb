@@ -10,8 +10,8 @@ module MmsIntegration
     when InterfaceUtils::Server::PRODUCTION
       self.site = 'http://127.0.0.1/'
       headers['Host'] = 'mms.thlib.org'
-    when InterfaceUtils::Server::LOCAL
-      self.site = 'http://localhost/mms/'
+      #when InterfaceUtils::Server::LOCAL
+      #self.site = 'http://localhost/mms/'
     when InterfaceUtils::Server::EBHUTAN
       self.site = 'http://www.e-bhutan.net.bt/mms/'
     else
