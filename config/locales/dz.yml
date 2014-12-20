@@ -11,6 +11,9 @@ dz:
             mms_integration/picture:
                 one: 'picture'
                 other: 'pictures'
+            mms_integration/video:
+                one: 'video'
+                other: 'videos'
         attributes:
             medium:
                 id: 'Resource #'
