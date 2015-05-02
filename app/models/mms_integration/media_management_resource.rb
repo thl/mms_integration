@@ -6,7 +6,7 @@ module MmsIntegration
       headers['Host'] = 'dev-mms.thlib.org'
     when InterfaceUtils::Server::STAGING
       self.site = 'http://127.0.0.1/'
-      headers['Host'] = 'staging.mms.thlib.org'
+      headers['Host'] = 'staging-mms.thlib.org'
     when InterfaceUtils::Server::PRODUCTION
       self.site = 'http://127.0.0.1/'
       headers['Host'] = 'mms.thlib.org'
