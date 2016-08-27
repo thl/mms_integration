@@ -1,3 +1,5 @@
+require_relative 'medium'
+
 module MmsIntegration
   class Document < Medium
     headers['Host'] = MediaManagementResource.headers['Host'] if !MediaManagementResource.headers['Host'].blank?
