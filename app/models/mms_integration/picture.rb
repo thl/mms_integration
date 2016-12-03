@@ -2,6 +2,8 @@ module MmsIntegration
   class Picture < MediaManagementResource
     headers['Host'] = MediaManagementResource.headers['Host'] if !MediaManagementResource.headers['Host'].blank?
     
+    acts_as_indexable path: 'asset_path', uid_prefix: MediaManagementResource.service, scope: {asset_type: 'picture', service: service}
+    
     def image
       @image ||= self.images.detect{|i| i.thumbnail == default_thumbnail}
     end
@@ -31,6 +33,10 @@ module MmsIntegration
       c = self.captions.first
       return nil if c.nil?
       @caption ||= c.title
+    end
+    
+    def self.search_by_place(fid)
+      self.search_by("kmapid:places-#{fid}")
     end
     
     private
