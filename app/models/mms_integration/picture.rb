@@ -1,10 +1,8 @@
 module MmsIntegration
-  class Picture < MediaManagementResource
+  class Picture < Medium
     headers['Host'] = MediaManagementResource.headers['Host'] if !MediaManagementResource.headers['Host'].blank?
     
     acts_as_indexable path: 'asset_path', uid_prefix: MediaManagementResource.service, scope: {asset_type: 'picture', service: service}
-    
-    PER_PAGE = 20 # Number of elements displayed on grid
 
     def image
       @image ||= self.images.detect{|i| i.thumbnail == default_thumbnail}
@@ -36,12 +34,7 @@ module MmsIntegration
       return nil if c.nil?
       @caption ||= c.title
     end
-    
-    # Expected options: page, per_page
-    def self.search_by_place(fid, options = {})
-      options.empty? ? self.search_by("kmapid:places-#{fid}") : self.paginate(options.merge(query: "kmapid:places-#{fid}"))
-    end
-    
+        
     private
     
     def default_thumbnail
