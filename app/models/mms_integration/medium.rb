@@ -34,5 +34,25 @@ module MmsIntegration
       url = web_address.url
       url.nil? ? '' : url
     end
+    
+    def bibliographic_reference
+      a = self.respond_to?(:photographer) ? [self.photographer.fullname] : []
+      a << "<i>#{self.prioritized_title}</i>"
+      s = a.join(', ')
+      if self.respond_to? :publisher
+        publisher = self.publisher
+        a = publisher.respond_to?(:country) ? [publisher.country] : []
+        a << publisher.title
+        s2 = a.join(': ')
+      else
+        s2 = nil
+      end
+      a = s2.blank? ? [] : [s2]
+      taken_on = self.respond_to?(:taken_on) ? self.taken_on : nil
+      a << taken_on if !taken_on.blank?
+      s2 = a.join(', ')
+      s << " (#{s2})" if !s2.blank?
+      return s.html_safe
+    end
   end
 end
