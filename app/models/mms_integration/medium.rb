@@ -54,5 +54,7 @@ module MmsIntegration
       s << " (#{s2})" if !s2.blank?
       return s.html_safe
     end
+
+    alias :title :prioritized_title
   end
 end
