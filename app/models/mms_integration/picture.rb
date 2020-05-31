@@ -1,6 +1,5 @@
 module MmsIntegration
   class Picture < Medium
-    headers['Host'] = MediaManagementResource.headers['Host'] if !MediaManagementResource.headers['Host'].blank?
     acts_as_indexable path: 'asset_path', uid_prefix: MediaManagementResource.service, scope: {asset_type: 'picture', service: service}
 
     def image

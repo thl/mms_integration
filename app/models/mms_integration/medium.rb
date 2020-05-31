@@ -1,6 +1,5 @@
 module MmsIntegration
   class Medium < MediaManagementResource
-    headers['Host'] = MediaManagementResource.headers['Host'] if !MediaManagementResource.headers['Host'].blank?
     self.element_name = 'media_object'
 
     PER_PAGE = 20 # Number of elements displayed on grid
