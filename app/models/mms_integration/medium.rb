@@ -17,7 +17,7 @@ module MmsIntegration
 
     # Using nested active resource. This is problematic when caching
     def feature_ids
-      self.associated_features.collect{ |c| c.fid }
+      self.locations
     end
     
     # Using nested active resource. This is problematic when caching
