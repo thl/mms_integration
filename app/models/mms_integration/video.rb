@@ -1,5 +1,5 @@
 module MmsIntegration
   class Video < Medium
-    acts_as_indexable path: 'asset_path', uid_prefix: MediaManagementResource.service, scope: {asset_type: 'video', service: service}
+    acts_as_indexable path: 'asset_path', hostname: 'asset_hostname', uid_prefix: '*', scope: {asset_type: 'video'}
   end
 end

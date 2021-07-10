@@ -1,6 +1,6 @@
 module MmsIntegration
   class Picture < Medium
-    acts_as_indexable path: 'asset_path', uid_prefix: MediaManagementResource.service, scope: {asset_type: 'picture', service: service}
+    acts_as_indexable path: 'asset_path', hostname: 'asset_hostname', uid_prefix: '*', scope: {asset_type: 'picture'}
 
     def image
       @image ||= self.images.detect{|i| i.thumbnail == default_thumbnail}
