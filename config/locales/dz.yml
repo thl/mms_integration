@@ -9,8 +9,8 @@ dz:
                 one: 'resource'
                 other: 'resources'
             mms_integration/picture:
-                one: 'picture'
-                other: 'pictures'
+                one: 'mms image'
+                other: 'mms images'
             mms_integration/video:
                 one: 'video'
                 other: 'videos'

@@ -9,8 +9,8 @@ en:
                 one: 'resource'
                 other: 'resources'
             mms_integration/picture:
-                one: 'image'
-                other: 'images'
+                one: 'mms image'
+                other: 'mms images'
             mms_integration/video:
                 one: 'video'
                 other: 'videos'

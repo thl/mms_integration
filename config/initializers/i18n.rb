@@ -1,0 +1,1 @@
+I18n.load_path += Dir[MmsIntegration::Engine.root.join('config', 'locales', '**', '*.yml')]
