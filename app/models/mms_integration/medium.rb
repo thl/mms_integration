@@ -6,7 +6,7 @@ module MmsIntegration
 
     # Just expected to be called by the descendants of Medium
     # Expected options: page, per_page
-    def self.search_by_kmapid(uid, options = {})
+    def self.search_by_kmapid(uid, **options)
       options.empty? ? self.search_by("kmapid:#{uid}") : self.paginate(options.merge(query: "kmapid:#{uid}"))
     end
 
