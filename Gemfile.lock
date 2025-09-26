@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mms_integration (2.4.6)
+    mms_integration (2.4.8)
       rails (>= 4.0)
 
 GEM
