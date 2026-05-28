@@ -10,7 +10,15 @@ module MmsIntegration
     else
       self.site = 'https://mms.thlib.org/'
     end
+    store = OpenSSL::X509::Store.new
+    store.set_default_paths
+    store.flags = 0
 
+    self.ssl_options = {
+      verify_mode: OpenSSL::SSL::VERIFY_PEER,
+      cert_store: store
+    }
+    
     self.timeout = 100
     self.format = :xml
   end
